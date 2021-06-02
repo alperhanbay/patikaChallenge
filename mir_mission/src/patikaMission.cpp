@@ -14,7 +14,7 @@ int main(int argc, char** argv)
     {
         ROS_INFO("Waiting for server .....");
     }
-    move_base_msgs::MoveBaseGoal goal; // değişken ismi
+    move_base_msgs::MoveBaseGoal goal; 
 
     goal.target_pose.header.frame_id = "map";
     goal.target_pose.header.stamp=ros::Time::now();
