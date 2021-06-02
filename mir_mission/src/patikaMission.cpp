@@ -8,7 +8,7 @@ int main(int argc, char** argv)
 {
     ros::init(argc, argv, "simple_navigation_goals");
     MoveBaseClient ac("move_base", true);
-   // MoveBaseClient ac2("move_base", true);
+   
 
     while (!ac.waitForServer(ros::Duration(5.)))
     {
@@ -22,7 +22,7 @@ int main(int argc, char** argv)
     goal.target_pose.pose.position.x = 2;
     goal.target_pose.pose.position.y = 8;
     goal.target_pose.pose.orientation.w = 0.640281897765;
-    move_base_msgs::MoveBaseGoal goal2; // değişken ismi
+    move_base_msgs::MoveBaseGoal goal2; 
 
     goal2.target_pose.header.frame_id = "map";
     goal2.target_pose.header.stamp=ros::Time::now();
@@ -37,7 +37,6 @@ int main(int argc, char** argv)
     ac.sendGoal(goal2);
     ac.waitForResult();
 
-    //std::cout<<ac.getstate()<<endl;
     if(ac.getState()==actionlib::SimpleClientGoalState::SUCCEEDED)
         ROS_INFO("The robot on the goal");
     else
