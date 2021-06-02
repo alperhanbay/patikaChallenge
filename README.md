@@ -12,4 +12,4 @@ roslaunch mir_mission patika.launch
 
 Gazebo and Rviz demo (existing map)
 --------------------------
-https://raw.githubusercontent.com/alperhanbay/patikaChallenge/main/Selection_003.png?token=AD4B3WKXUXG4EYN73M3ISLTAYE4SO
+![Image of Demo](https://github.com/alperhanbay/patikaChallenge/blob/main/Selection_003.png)
